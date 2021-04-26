@@ -2,16 +2,17 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  GOV.UK Prototype Kit Demo
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">{{releaseVersion}}</span>
+
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+        The GOV.UK Prototype Kit Jason Lee
       </h1>{{releaseVersion | log }}
       <p>
         This kit lets you rapidly create HTML prototypes of GOV.UK services.
@@ -22,6 +23,12 @@
       </p>
 
       <h2 class="govuk-heading-m">About this page</h2>
+
+<p>
+  {{ data['hello'] }}
+</p>
+
+<p><a href="/start">Start page</a>
 
       <p>We recommend you add links to your prototype to this page, rather than delete it.
         You'll find this page in the kit at '/app/views/index.html'.</p>
